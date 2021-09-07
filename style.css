@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right bottom, #00ffaa, rgb(0, 128, 255));
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  width: 600px;
+  height: 650px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  height: 100px;
+  background: dodgerblue;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+  font-size: 1.9rem;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.player-container {
+  margin: 50px;
+}
+
+.far {
+  font-size: 2.5rem;
+  margin-right: 40px;
+  user-select: none;
+}
+
+.hand-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#player .far:hover {
+  filter: brightness(110%);
+}
+
+#player .far,
+#computer .far {
+  height: 70px;
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 240, 176);
+  border-radius: 50%;
+}
+
+#player .far {
+  box-shadow: 0 5px rgb(212, 198, 0);
+}
+
+#player .far.selected,
+#computer .far.selected {
+  color: #fff;
+  background: rgb(47, 151, 255);
+  box-shadow: 0 5px rgb(2, 76, 149);
+}
+
+#player .far:active {
+  box-shadow: 0 0px transparent;
+  transform: translateY(4px);
+}
+
+#player .far,
+#player .choice {
+  color: rgb(61, 59, 179);
+  cursor: pointer;
+}
+#player #playerChoice {
+  color: rgb(4, 0, 255);
+  cursor: auto;
+}
+
+#computer .far,
+#computer .choice {
+  color: rgb(235, 43, 52);
+  /* cursor: pointer; */
+}
+
+#computer {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgb(172, 172, 172);
+  margin-bottom: 3rem;
+}
+
+#player .far:last-of-type,
+#computer .far:last-of-type {
+  margin-right: 0;
+}
+
+.reset-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-left: 50px;
+  margin-top: -5rem;
+}
+
+.reset-icon:hover {
+  color: dodgerblue;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.result-text {
+  font-size: 2.5rem;
+  margin: unset;
+  text-shadow: 0px 0px 1px rgb(0, 0, 0);
+}
+
+.result-text2 {
+  font-size: 1.5rem;
+}
+
+.rules-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* position: relative;
+  right: 14rem; */
+}
+
+.rules-video {
+  /* visibility: hidden; */
+  padding: 0.5rem;
+  /* position: absolute;
+  bottom:10rem; */
+}
+
+/*hide the inputs/checkmarks and submenu*/
+input, ul.submenu {
+  display: none;
+}
+
+/*position the label*/
+label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+/*show the submenu when input is checked*/
+input:checked~ul.submenu {
+  display: block;
+  list-style: square;
+}
+
+/*
+ CSS for the main interaction
+*/
+.accordion > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.accordion .content {
+  overflow-y: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  height: auto;
+  overflow: visible;
+}
+
+.accordion label {
+  display: block;
+}
+
+/*
+ Styling
+*/
+.accordion {
+  max-width: 38rem;
+  padding: 1rem;
+  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+  color: #333;
+  font-weight: 300;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  padding: 15px;
+  border: 1px solid #e8e8e850;
+  border-top: 0;
+}
+
+.content .list-item {
+  font-weight: bold;
+  list-style: none;
+  position: relative;
+  left: 80px;
+  padding: 0.2rem;
+}
+
+.accordion .handle {
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.2em;
+}
+
+.accordion label {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 15px;
+  /* background: #e8e8e8; */
+  border: 1px solid #e8e8e841;
+}
+
+.accordion label:hover,
+.accordion label:focus {
+  background: #ffffff3a;
+}
+
+.accordion p {
+  margin: 0 0 1em;
+  color: white;
+}
+
+.accordion ul {
+  margin: 0;
+}
+
+.accordion ul > li {
+  color: white;
+  font-size: 1rem;
+  list-style: square;
+  text-align: left;
+  position: relative;
+  left: 6rem;
+}
+
+#chun-li img {
+  /* display: none; */
+  /* visibility: visible; */
+  width: 130px;
+  position: relative;
+  bottom: 8.4rem;
+  right: 18rem;
+}
+
+#color-girl img {
+  /* display: none; */
+  /* visibility: visible; */
+  width: 130px;
+  position: relative;
+  bottom: 16.8rem;
+  left: 16rem;
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media (max-width: 650px) {
+  .game-container {
+    width: 420px;
+    height: 580px;
+  }
+
+  .header {
+    height: 80px;
+  }
+
+  .result-container {
+    position: relative;
+    bottom: 2rem;
+  }
+
+  .result-text {
+    font-size: 1.7rem;
+  }
+
+  .result-text2 {
+    font-size: 1.2rem;
+  }
+
+  .far {
+    font-size: 2rem;
+    margin-right: 20px;
+  }
+
+  .rules {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  #player .far,
+  #computer .far {
+    height: 45px;
+    width: 50px;
+  }
+
+  .player-container {
+    margin: 50px 0 25px 25px;
+  }
+
+  .reset-icon {
+    font-size: 1.4rem;
+    margin-top: 25px;
+    margin-left: 25px;
+    position: relative;
+    bottom: 40px;
+  }
+
+  #chun-li img {
+    width: 100px;
+    bottom: 4rem;
+    right: 10rem;
+  }
+  
+  #color-girl img {
+    width: 100px;
+    bottom: 10.5rem;
+    left: 11rem;
+  }
+
+  .rules-video iframe {
+    width: 294px;
+    height: 175px;
+    padding: 0.5rem;
+  }
+
+  .accordion {
+    max-width: 26rem;
+  }
+
+  .accordion ul > li {
+    font-size: 1rem;
+    left: 3rem;
+  }
+
+  .content .list-item {
+    left: 30px;
+    padding: 0.2rem;
+  }
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 400px) {
+   html {
+    font-size: 80%;
+  }
+
+  .game-container {
+    width: 300px;
+    height: 480px;
+  }
+
+  .header {
+    height: 60px;
+  }
+
+  .result-container {
+    position: relative;
+    bottom: 2rem;
+  }
+
+  .result-text {
+    font-size: 1.7rem;
+  }
+
+  .result-text2 {
+    font-size: 1.2rem;
+  }
+
+  .far {
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+
+  .rules {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  #player .far,
+  #computer .far {
+    height: 37.8px;
+    width: 42px;
+  }
+
+  .player-container {
+    margin: 50px 0 25px 0px;
+  }
+
+  .player-container h2 {
+    margin: 50px 0 25px 25px;
+  }
+
+  .reset-icon {
+    font-size: 1.4rem;
+    margin-top: 25px;
+    margin-left: 25px;
+    position: relative;
+    bottom: 40px;
+  }
+
+  #chun-li img {
+    width: 80px;
+    bottom: 6.2rem;
+    right: 10rem;
+  }
+  
+  #color-girl img {
+    width: 80px;
+    bottom: 12.7rem;
+    left: 10.5rem;
+  }
+
+  .rules-video iframe {
+    width: 205px;
+    height: 122px;
+    padding: 0.5rem;
+  }
+
+  .accordion {
+    max-width: 23rem;
+  }
+
+  .accordion ul > li {
+    font-size: 1rem;
+    left: 1rem;
+  }
+
+  .content .list-item {
+    left: -5px;
+    padding: 0.2rem;
+  }
+}
