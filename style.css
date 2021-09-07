@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 html {
   box-sizing: border-box;
@@ -281,6 +282,20 @@ input:checked~ul.submenu {
   position: relative;
   bottom: 16.8rem;
   left: 16rem;
+}
+
+footer a {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 0.3rem 0.5rem;
+}
+
+footer a:visited {
+  color: white;
 }
 
 /* Media Query: Large Smartphone (Vertical) */
