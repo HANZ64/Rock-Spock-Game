@@ -63,11 +63,18 @@
           <label for="handle1">Rules</label>
         </h2>
         <div class="content">
-          <div class="rules-video">
+          <!-- <div class="rules-video">
             <iframe width="420" height="250" src="https://www.youtube.com/embed/405Nh2H4Ucg" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div> -->
+          <div>
+            <video controls>
+              <source src="video/Sheldon Explains Rock-Paper-Scissors-Lizard-Spock.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
           <ul>
-            <li class="list-item"><a href="https://www.youtube.com/embed/405Nh2H4Ucg" target="_blank" rel="noopener noreferrer">(Video Link)</a></li>
+            <li class="list-item text-link"><a href="https://www.youtube.com/watch?v=-GE6-bC1qUk" target="_blank" rel="noopener noreferrer">(Video Link)</a></li>
+            <li class="list-item">Instructions:</li>
             <li>Scissors cuts Paper,</li>
             <li>Paper covers Rock,</li>
             <li>Rock crushes Lizard,</li>
@@ -78,13 +85,14 @@
             <li>Paper disproves Spock,</li>
             <li>Spock vaporizes Rock,</li>
             <li>Rock crushes Scissors.</li>
-            <li class="list-item">(Play for 10/50/100 rounds to win).</li>
+            <li class="list-item">Play for 10/50/100/1000 rounds to win & unlock audio easter eggs.</li>
           </ul>
         </div>
       </section>
     </div>
     <footer><a href="https://hanif.tech/" target="_blank" rel="noopener noreferrer">Hanif.tech</a></footer>
     <!-- Script -->
-    <script src="script.js" type="module"></script>
+    <script type="module" src="sounds.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

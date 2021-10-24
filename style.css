@@ -31,6 +31,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 
 .game-container {
@@ -38,7 +39,7 @@ body {
   height: 650px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.5);
 }
 
 .header {
@@ -70,6 +71,10 @@ h2 {
   user-select: none;
 }
 
+.far.disabled {
+  filter: brightness(60%);
+}
+
 .hand-container {
   display: flex;
   justify-content: center;
@@ -78,6 +83,11 @@ h2 {
 
 #player .far:hover {
   filter: brightness(110%);
+}
+
+#player .far.disabled:hover {
+  cursor: not-allowed;
+  filter: brightness(60%);
 }
 
 #player .far,
@@ -99,12 +109,25 @@ h2 {
 #computer .far.selected {
   color: #fff;
   background: rgb(47, 151, 255);
+}
+
+#player .far.selected {
+  box-shadow: 0 5px rgb(2, 76, 149);
+}
+
+#player .far.disabled.selected:active,
+#computer .far.disabled.selected:active {
   box-shadow: 0 5px rgb(2, 76, 149);
 }
 
 #player .far:active {
   box-shadow: 0 0px transparent;
   transform: translateY(4px);
+}
+
+#player .far.disabled:active {
+  box-shadow: 0 5px rgb(212, 198, 0);
+  transform: translateY(0px);
 }
 
 #player .far,
@@ -137,8 +160,10 @@ h2 {
 .reset-icon {
   font-size: 1.8rem;
   cursor: pointer;
-  margin-left: 50px;
+  margin-left: 40px;
   margin-top: -5rem;
+  position: relative;
+  top: -10px;
 }
 
 .reset-icon:hover {
@@ -171,12 +196,26 @@ h2 {
   right: 14rem; */
 }
 
-.rules-video {
-  /* visibility: hidden; */
-  padding: 0.5rem;
-  /* position: absolute;
-  bottom:10rem; */
+video {
+  width: 100%;
 }
+
+/* Video Text link styling */
+.text-link a {
+  color: black;
+  text-decoration: none;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.text-link a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+/* .rules-video {
+  padding: 0.5rem;
+} */
 
 /*hide the inputs/checkmarks and submenu*/
 input, ul.submenu {
@@ -196,9 +235,7 @@ input:checked~ul.submenu {
   list-style: square;
 }
 
-/*
- CSS for the main interaction
-*/
+/* Accordion CSS for the main interaction */
 .accordion > input[type="checkbox"] {
   position: absolute;
   left: -100vw;
@@ -219,15 +256,11 @@ input:checked~ul.submenu {
   display: block;
 }
 
-/*
- Styling
-*/
+/* Accordion Styling */
 .accordion {
-  max-width: 38rem;
+  max-width: 36rem;
   padding: 1rem;
-  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
-  color: #333;
-  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
 }
 
 .accordion > input[type="checkbox"]:checked ~ .content {
@@ -236,11 +269,26 @@ input:checked~ul.submenu {
   border-top: 0;
 }
 
+.content {
+  text-align: left;
+  user-select: text;
+}
+
+.content ul {
+  margin: 0; 
+  padding: 0;
+  position: relative;
+  left: -3rem;
+}
+.content li {
+  /* border: 1px solid black; */
+  height: 2rem;
+}
+
 .content .list-item {
   font-weight: bold;
   list-style: none;
-  position: relative;
-  left: 80px;
+  left: 4rem;
   padding: 0.2rem;
 }
 
@@ -288,8 +336,10 @@ input:checked~ul.submenu {
   /* visibility: visible; */
   width: 130px;
   position: relative;
-  bottom: 8.4rem;
+  bottom: 7.9rem;
   right: 18rem;
+  pointer-events: none;
+  user-select: none;
 }
 
 #color-girl img {
@@ -297,8 +347,10 @@ input:checked~ul.submenu {
   /* visibility: visible; */
   width: 130px;
   position: relative;
-  bottom: 16.8rem;
+  bottom: 16.3rem;
   left: 16rem;
+  pointer-events: none;
+  user-select: none;
 }
 
 footer a {
@@ -320,7 +372,7 @@ footer a:visited {
   color: white;
 }
 
-/* Media Query: Large Smartphone (Vertical) */
+/* Media Query: Tablet */
 @media (max-width: 650px) {
   .game-container {
     width: 420px;
@@ -378,30 +430,29 @@ footer a:visited {
     font-size: 1.4rem;
     margin-top: 25px;
     margin-left: 25px;
-    position: relative;
-    bottom: 40px;
+    top: -40px;
   }
 
   #chun-li img {
     width: 100px;
-    bottom: 4rem;
+    bottom: 3.7rem;
     right: 10rem;
   }
   
   #color-girl img {
     width: 100px;
-    bottom: 10.5rem;
+    bottom: 10.3rem;
     left: 11rem;
   }
 
-  .rules-video iframe {
+  /* .rules-video iframe {
     width: 294px;
     height: 175px;
     padding: 0.5rem;
-  }
+  } */
 
   .accordion {
-    max-width: 26rem;
+    max-width: 25rem;
   }
 
   .accordion ul > li {
@@ -409,20 +460,25 @@ footer a:visited {
     left: 3rem;
   }
 
+  .content ul {
+    left: 0rem;
+  }
+
   .content .list-item {
-    left: 30px;
-    padding: 0.2rem;
+    left: 1rem;
   }
 
   footer a {
+    position: absolute;
     font-size: 0.8rem;
+    font-style: italic;
     bottom: auto;
     top: 0;
   }
 }
 
-/* Media Query: iPhone (Vertical) */
-@media screen and (max-width: 400px) {
+/* Media Query: Smartphone */
+@media screen and (max-width: 435px) {
    html {
     font-size: 80%;
   }
@@ -430,6 +486,7 @@ footer a:visited {
   .game-container {
     width: 300px;
     height: 480px;
+    margin-top: 1.6rem;
   }
 
   .header {
@@ -462,7 +519,7 @@ footer a:visited {
   }
 
   h1 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   h2 {
@@ -493,24 +550,24 @@ footer a:visited {
 
   #chun-li img {
     width: 80px;
-    bottom: 6.2rem;
-    right: 10rem;
+    bottom: 6rem;
+    right: 11rem;
   }
   
   #color-girl img {
     width: 80px;
-    bottom: 12.7rem;
-    left: 10.5rem;
+    bottom: 12.4rem;
+    left: 10.8rem;
   }
 
-  .rules-video iframe {
+  /* .rules-video iframe {
     width: 205px;
     height: 122px;
     padding: 0.5rem;
-  }
+  } */
 
   .accordion {
-    max-width: 23rem;
+    max-width: 22rem;
   }
 
   .accordion ul > li {
@@ -518,8 +575,15 @@ footer a:visited {
     left: 1rem;
   }
 
+  .content ul {
+    left: 1.5rem;
+  }
+
   .content .list-item {
-    left: -5px;
-    padding: 0.2rem;
+    left: -1.5rem;
+  }
+
+  footer a {
+    font-size: 0.7rem;
   }
 }

@@ -1,4 +1,19 @@
 import { startConfetti, stopConfetti, removeConfetti } from './confetti.js';
+import { 
+  buttonSound, 
+  soundArrayLose5, 
+  soundArrayLose10, 
+  soundArrayLose20, 
+  soundArrayLose50, 
+  soundArrayLose100, 
+  soundArrayLose1000, 
+  soundArrayWin5, 
+  soundArrayWin10, 
+  soundArrayWin20, 
+  soundArrayWin50, 
+  soundArrayWin100, 
+  sm64UltimateKoopaClear_1000WinSound 
+} from './sounds.js';
 
 const playerScoreEl = document.getElementById('playerScore');
 const playerChoiceEl = document.getElementById('playerChoice');
@@ -24,13 +39,6 @@ const allGameIcon = document.querySelectorAll('.far');
 const chunLi = document.getElementById('chun-li');
 const colorGirl = document.getElementById('color-girl');
 
-const hitSound = new Audio('sounds/click2.mp3');
-const lossSound = new Audio('sounds/aww.mp3');
-const lossSound2 = new Audio('sounds/aww2.mp3');
-const winSound = new Audio('sounds/cash.mp3');
-const fiftyWinSound = new Audio('sounds/50win.mp3');
-const hundredWinSound = new Audio('sounds/100win.mp3');
-
 const choices = {
   rock: { name: 'Rock', defeats: ['scissors', 'lizard'] },
   paper: { name: 'Paper', defeats: ['rock', 'spock'] },
@@ -42,11 +50,98 @@ const choices = {
 let playerScoreNumber = 0;
 let computerScoreNumber = 0;
 let computerChoice = '';
+let buttonDisable = false;
+
+/////////////////////////////
+
+// The Fisher–Yates Shuffle
+// function shuffle(array) {
+//   var i = array.length,
+//       j = 0,
+//       temp;
+
+//   while (i--) {
+
+//       j = Math.floor(Math.random() * (i+1));
+
+//       // swap randomly chosen element with current element
+//       temp = array[i];
+//       array[i] = array[j];
+//       array[j] = temp;
+
+//   }
+
+//   return array;
+// }
+
+// Durstenfeld shuffle
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  prevMySounds = [...array] // Save current array
+  return array;
+}
+
+let prevMySounds = [];
+
+function randomSound(array) {
+  // let index = Math.floor(Math.random() * 1000) % soundArray.length;
+  // var id = soundArray[index];
+  // id.play();
+
+  if (array.length < 1) {
+    console.log("Array is empty.")
+    return array
+  } else if (array.length < 2) {
+    //console.log(array[0])
+    array[0].play();
+    return array[0]
+  } else {
+    let previousArrayCheck = prevMySounds;
+    //console.log('previousArrayCheck', previousArrayCheck[0])
+
+    let randomTrack = shuffleArray(array);
+    let id = randomTrack[0];
+    
+    //console.log('id1', id)
+    if(id === previousArrayCheck[0]) {
+      //console.log("DUPLICATE!!!")
+
+      while (id === previousArrayCheck[0]) {
+        //console.log("WHILE DUPLICATE!!!")
+        randomTrack = shuffleArray(array);
+        id = randomTrack[0];
+        //console.log('id2', id)
+      }
+    }
+    id.play();
+    return id;
+  }
+}
+
+// Disable/Enable Button
+function toggleButton(num) {
+  allGameIcon.forEach(icon => {
+    icon.classList.add('disabled');
+    buttonDisable = true;
+  });
+  allGameIcon.forEach(icon => {
+    setTimeout(() => {
+      icon.classList.remove('disabled');
+      buttonDisable = false;
+    }, num);
+  });
+  return
+}
 
 // reset all selected icons
 function resetSelected() {
   allGameIcon.forEach(icon => {
     icon.classList.remove('selected');
+    icon.classList.remove('disabled');
+    buttonDisable = false;
   });
   stopConfetti();
   removeConfetti();
@@ -121,6 +216,7 @@ function updateScore(playerChoice) {
     colorGirl.style.visibility = 'hidden';
     chunLi.style.visibility = 'hidden';
   } else {
+    
     const choice = choices[playerChoice];
     const choice2 = choices[computerChoice];
     // resultText2.textContent = choice.name + " beats " + choice2.name;
@@ -130,44 +226,97 @@ function updateScore(playerChoice) {
       playerScoreNumber++;
       playerScoreEl.textContent = playerScoreNumber;
       resultText2.textContent = choice.name + " beats " + choice2.name;
-      if(playerScoreNumber % 10 == 0) {
+      if(playerScoreNumber % 5 == 0 && playerScoreNumber % 50 !== 0 && playerScoreNumber % 100 !== 0 && playerScoreNumber % 1000 !== 0) {
+        resultText.textContent = `You Won, Keep Going!`;
+        let soundWin5 = randomSound(soundArrayWin5);
+        if(playerScoreNumber % 10 !== 0 && playerScoreNumber % 20 !== 0 && playerScoreNumber % 50 !== 0 && playerScoreNumber % 100 !== 0 && playerScoreNumber % 1000 !== 0) {
+          let soundDuration = Math.floor(soundWin5.duration) * 1000;
+          toggleButton(soundDuration > 1000 ? (soundDuration - 500) : 500);
+        }
+      }
+      if(playerScoreNumber % 10 == 0 && playerScoreNumber % 50 !== 0 && playerScoreNumber % 100 !== 0 && playerScoreNumber % 1000 !== 0) {
         resultText.textContent = `You Won ${playerScoreNumber} rounds!`;
-        winSound.play();
+        let soundWin10 = randomSound(soundArrayWin10);
+        toggleButton(Math.floor(soundWin10.duration) * 1000 - 500);
         colorGirl.style.visibility = 'visible';
         startConfetti();
       }
-      if(playerScoreNumber % 50 == 0) {
+      if(playerScoreNumber % 20 == 0 && playerScoreNumber % 100 !== 0 && playerScoreNumber % 1000 !== 0) {
+        randomSound(soundArrayWin20);
+      }
+      if(playerScoreNumber % 50 == 0 && playerScoreNumber % 100 !== 0 && playerScoreNumber % 1000 !== 0) {
         resultText.textContent = `You Won ${playerScoreNumber} rounds!`;
-        fiftyWinSound.play();
+        let soundWin50 = randomSound(soundArrayWin50);
+        toggleButton(Math.floor(soundWin50.duration) * 1000 - 500);
         colorGirl.style.visibility = 'visible';
         startConfetti();
       }
-      if(playerScoreNumber % 100 == 0) {
+      if(playerScoreNumber % 100 == 0 && playerScoreNumber % 1000 !== 0) {
         resultText.textContent = `Wow You Won ${playerScoreNumber} rounds!`;
-        hundredWinSound.play();
+        let soundWin100 = randomSound(soundArrayWin100);
+        toggleButton(Math.floor(soundWin100.duration) * 1000 - 500);
         colorGirl.style.visibility = 'visible';
         startConfetti();
+      }
+      if(playerScoreNumber % 1000 == 0) {
+        resultText.textContent = `OMG You Won ${playerScoreNumber} rounds!!!`;
+        resultText2.textContent = `YOU BEAT THE GAME, WELL DONE! ^_^`;
+        sm64UltimateKoopaClear_1000WinSound.play();
+        startConfetti();
+        allGameIcon.forEach(icon => {
+          icon.classList.add('disabled');
+          buttonDisable = true;
+        });
       }
     } else {
       resultText.textContent = 'You Lost!';
       computerScoreNumber++;
       computerScoreEl.textContent = computerScoreNumber;
       resultText2.textContent = choice2.name + " beats " + choice.name;
-      if(computerScoreNumber % 10 == 0) {
+      if(computerScoreNumber % 5 == 0 && computerScoreNumber % 50 !== 0 && computerScoreNumber % 100 !== 0 && computerScoreNumber % 1000 !== 0) {
+        resultText.textContent = `You Lost, Don't Give Up!`;
+        let soundLose5 = randomSound(soundArrayLose5);
+        if(computerScoreNumber % 10 !== 0 && computerScoreNumber % 20 !== 0 && computerScoreNumber % 50 !== 0 && computerScoreNumber % 100 !== 0 && computerScoreNumber % 1000 !== 0) {
+          let soundDuration = Math.floor(soundLose5.duration) * 1000;
+          toggleButton(soundDuration > 1000 ? (soundDuration - 500) : 500);
+        }
+      }
+      if(computerScoreNumber % 10 == 0 && computerScoreNumber % 50 !== 0 && computerScoreNumber % 100 !== 0 && computerScoreNumber % 1000 !== 0) {
         resultText.textContent = `You Lost ${computerScoreNumber} rounds...`;
-        lossSound.play();
+        let soundLose10 = randomSound(soundArrayLose10);
+        toggleButton(Math.floor(soundLose10.duration) * 1000 - 500);
         chunLi.style.visibility = 'visible';
       }
-      if(computerScoreNumber % 50 == 0) {
-        resultText.textContent = `You Lost ${computerScoreNumber} rounds...`;
-        lossSound2.play();
+      if(computerScoreNumber % 20 == 0 && computerScoreNumber % 100 !== 0 && computerScoreNumber % 1000 !== 0) {
+        randomSound(soundArrayLose20);
+      }
+      if(computerScoreNumber % 50 == 0 && computerScoreNumber % 100 !== 0 && computerScoreNumber % 1000 !== 0) {
+        resultText.textContent = `You Lost ${computerScoreNumber} rounds :(`;
+        let soundLose50 = randomSound(soundArrayLose50);
+        toggleButton(Math.floor(soundLose50.duration) * 1000 - 500);
         chunLi.style.visibility = 'visible';
+      }
+      if(computerScoreNumber % 100 == 0 && computerScoreNumber % 1000 !== 0) {
+        resultText.textContent = `You Lost ${computerScoreNumber} rounds 😢`;
+        let soundLose100 = randomSound(soundArrayLose100);
+        toggleButton(Math.floor(soundLose100.duration) * 1000 - 500);
+        chunLi.style.visibility = 'visible';
+      }
+      if(computerScoreNumber === 1000) {
+        resultText.textContent = `You Lost ${computerScoreNumber} times O_O`;
+        resultText2.textContent = `GAME OVER`;
+        randomSound(soundArrayLose1000);
+        chunLi.style.visibility = 'visible';
+        allGameIcon.forEach(icon => {
+          icon.classList.add('disabled');
+          buttonDisable = true;
+        });
       }
     }
   }
 }
 
-// call functions to proccess turn
+// call functions to process turn
 function checkResult(playerChoice) {
   resetSelected();
   computerRandomChoice();
@@ -177,35 +326,39 @@ function checkResult(playerChoice) {
 
 // passing player selection value and styling icons
 function select(playerChoice) {
-  checkResult(playerChoice);
-  switch (playerChoice) {
-    case 'rock':
-      playerRock.classList.add('selected');
-      playerChoiceEl.textContent = ' --- Rock';
-      hitSound.play();
-      break;
-    case 'paper':
-      playerPaper.classList.add('selected');
-      playerChoiceEl.textContent = ' --- Paper';
-      hitSound.play();
-      break;
-    case 'scissors':
-      playerScissors.classList.add('selected');
-      playerChoiceEl.textContent = ' --- Scissors';
-      hitSound.play();
-      break;
-    case 'lizard':
-      playerLizard.classList.add('selected');
-      playerChoiceEl.textContent = ' --- Lizard';
-      hitSound.play();
-      break;
-    case 'spock':
-      playerSpock.classList.add('selected');
-      playerChoiceEl.textContent = ' --- Spock';
-      hitSound.play();
-      break;
-    default:
-      break;
+  if (!buttonDisable) {
+    checkResult(playerChoice);
+    switch (playerChoice) {
+      case 'rock':
+        playerRock.classList.add('selected');
+        playerChoiceEl.textContent = ' --- Rock';
+        buttonSound.play();
+        break;
+      case 'paper':
+        playerPaper.classList.add('selected');
+        playerChoiceEl.textContent = ' --- Paper';
+        buttonSound.play();
+        break;
+      case 'scissors':
+        playerScissors.classList.add('selected');
+        playerChoiceEl.textContent = ' --- Scissors';
+        buttonSound.play();
+        break;
+      case 'lizard':
+        playerLizard.classList.add('selected');
+        playerChoiceEl.textContent = ' --- Lizard';
+        buttonSound.play();
+        break;
+      case 'spock':
+        playerSpock.classList.add('selected');
+        playerChoiceEl.textContent = ' --- Spock';
+        buttonSound.play();
+        break;
+      default:
+        break;
+      }
+  } else {
+    return
   }
 }
 
