@@ -230,14 +230,14 @@ function updateScore(playerChoice) {
         resultText.textContent = `You Won, Keep Going!`;
         let soundWin5 = randomSound(soundArrayWin5);
         if(playerScoreNumber % 10 !== 0 && playerScoreNumber % 20 !== 0 && playerScoreNumber % 50 !== 0 && playerScoreNumber % 100 !== 0 && playerScoreNumber % 1000 !== 0) {
-          let soundDuration = Math.floor(soundWin5.duration) * 1000;
+          let soundDuration = Math.floor(soundWin5._duration) * 1000;
           toggleButton(soundDuration > 1000 ? (soundDuration - 500) : 500);
         }
       }
       if(playerScoreNumber % 10 == 0 && playerScoreNumber % 50 !== 0 && playerScoreNumber % 100 !== 0 && playerScoreNumber % 1000 !== 0) {
         resultText.textContent = `You Won ${playerScoreNumber} rounds!`;
         let soundWin10 = randomSound(soundArrayWin10);
-        toggleButton(Math.floor(soundWin10.duration) * 1000 - 500);
+        toggleButton(Math.floor(soundWin10._duration) * 1000 - 500);
         colorGirl.style.visibility = 'visible';
         startConfetti();
       }
@@ -247,14 +247,14 @@ function updateScore(playerChoice) {
       if(playerScoreNumber % 50 == 0 && playerScoreNumber % 100 !== 0 && playerScoreNumber % 1000 !== 0) {
         resultText.textContent = `You Won ${playerScoreNumber} rounds!`;
         let soundWin50 = randomSound(soundArrayWin50);
-        toggleButton(Math.floor(soundWin50.duration) * 1000 - 500);
+        toggleButton(Math.floor(soundWin50._duration) * 1000 - 500);
         colorGirl.style.visibility = 'visible';
         startConfetti();
       }
       if(playerScoreNumber % 100 == 0 && playerScoreNumber % 1000 !== 0) {
         resultText.textContent = `Wow You Won ${playerScoreNumber} rounds!`;
         let soundWin100 = randomSound(soundArrayWin100);
-        toggleButton(Math.floor(soundWin100.duration) * 1000 - 500);
+        toggleButton(Math.floor(soundWin100._duration) * 1000 - 500);
         colorGirl.style.visibility = 'visible';
         startConfetti();
       }
@@ -277,14 +277,14 @@ function updateScore(playerChoice) {
         resultText.textContent = `You Lost, Don't Give Up!`;
         let soundLose5 = randomSound(soundArrayLose5);
         if(computerScoreNumber % 10 !== 0 && computerScoreNumber % 20 !== 0 && computerScoreNumber % 50 !== 0 && computerScoreNumber % 100 !== 0 && computerScoreNumber % 1000 !== 0) {
-          let soundDuration = Math.floor(soundLose5.duration) * 1000;
+          let soundDuration = Math.floor(soundLose5._duration) * 1000;
           toggleButton(soundDuration > 1000 ? (soundDuration - 500) : 500);
         }
       }
       if(computerScoreNumber % 10 == 0 && computerScoreNumber % 50 !== 0 && computerScoreNumber % 100 !== 0 && computerScoreNumber % 1000 !== 0) {
         resultText.textContent = `You Lost ${computerScoreNumber} rounds...`;
         let soundLose10 = randomSound(soundArrayLose10);
-        toggleButton(Math.floor(soundLose10.duration) * 1000 - 500);
+        toggleButton(Math.floor(soundLose10._duration) * 1000 - 500);
         chunLi.style.visibility = 'visible';
       }
       if(computerScoreNumber % 20 == 0 && computerScoreNumber % 100 !== 0 && computerScoreNumber % 1000 !== 0) {
@@ -293,13 +293,13 @@ function updateScore(playerChoice) {
       if(computerScoreNumber % 50 == 0 && computerScoreNumber % 100 !== 0 && computerScoreNumber % 1000 !== 0) {
         resultText.textContent = `You Lost ${computerScoreNumber} rounds :(`;
         let soundLose50 = randomSound(soundArrayLose50);
-        toggleButton(Math.floor(soundLose50.duration) * 1000 - 500);
+        toggleButton(Math.floor(soundLose50._duration) * 1000 - 500);
         chunLi.style.visibility = 'visible';
       }
       if(computerScoreNumber % 100 == 0 && computerScoreNumber % 1000 !== 0) {
         resultText.textContent = `You Lost ${computerScoreNumber} rounds 😢`;
         let soundLose100 = randomSound(soundArrayLose100);
-        toggleButton(Math.floor(soundLose100.duration) * 1000 - 500);
+        toggleButton(Math.floor(soundLose100._duration) * 1000 - 500);
         chunLi.style.visibility = 'visible';
       }
       if(computerScoreNumber === 1000) {
