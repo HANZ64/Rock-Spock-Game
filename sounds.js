@@ -1,14 +1,14 @@
 export const buttonSound = new Audio('https://www.mboxdrive.com/click.mp3');
 
 // 5 Win Sounds
-const animeGirlYes_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-yes.mp3');
-const animeGirlYay_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-yay.mp3');
-const animeGirlUwu_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-uwu.mp3');
-const catGirlNya_5WinSound = new Audio('https://www.mboxdrive.com/5win-cat-girl-nya.mp3');
-// const animeGirlYes_5WinSound = new Audio('./sounds/5win-anime-girl-yes.mp3');
-// const animeGirlYay_5WinSound = new Audio('./sounds/5win-anime-girl-yay.mp3');
-// const animeGirlUwu_5WinSound = new Audio('./sounds/5win-anime-girl-uwu.mp3');
-// const catGirlNya_5WinSound = new Audio('./sounds/5win-cat-girl-nya.mp3');
+// const animeGirlYes_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-yes.mp3');
+// const animeGirlYay_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-yay.mp3');
+// const animeGirlUwu_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-uwu.mp3');
+// const catGirlNya_5WinSound = new Audio('https://www.mboxdrive.com/5win-cat-girl-nya.mp3');
+const animeGirlYes_5WinSound = new Audio('./sounds/5win-anime-girl-yes.mp3');
+const animeGirlYay_5WinSound = new Audio('./sounds/5win-anime-girl-yay.mp3');
+const animeGirlUwu_5WinSound = new Audio('./sounds/5win-anime-girl-uwu.mp3');
+const catGirlNya_5WinSound = new Audio('./sounds/5win-cat-girl-nya.mp3');
 const tututuAnime_5WinSound = new Audio('./sounds/5win-tututu-anime.mp3');
 const gudjob_5WinSound = new Audio('./sounds/5win-gudjob.mp3');
 const sonicRingSound_5WinSound = new Audio('./sounds/5win-sonic-ring-sound.mp3');
