@@ -75,51 +75,51 @@ let buttonDisable = false;
 // }
 
 // Durstenfeld shuffle
-function shuffleArray(array) {
+function randomSound(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
-  prevMySounds = [...array] // Save current array
+  //prevMySounds = [...array] // Save current array
   return array;
 }
 
-let prevMySounds = [];
+// let prevMySounds = [];
 
-function randomSound(array) {
-  // let index = Math.floor(Math.random() * 1000) % soundArray.length;
-  // var id = soundArray[index];
-  // id.play();
+// function randomSound(array) {
+//   // let index = Math.floor(Math.random() * 1000) % soundArray.length;
+//   // var id = soundArray[index];
+//   // id.play();
 
-  if (array.length < 1) {
-    console.log("Array is empty.")
-    return array
-  } else if (array.length < 2) {
-    //console.log(array[0])
-    array[0].play();
-    return array[0]
-  } else {
-    let previousArrayCheck = prevMySounds;
-    //console.log('previousArrayCheck', previousArrayCheck[0])
+//   if (array.length < 1) {
+//     console.log("Array is empty.")
+//     return array
+//   } else if (array.length < 2) {
+//     //console.log(array[0])
+//     array[0].play();
+//     return array[0]
+//   } else {
+//     let previousArrayCheck = prevMySounds;
+//     //console.log('previousArrayCheck', previousArrayCheck[0])
 
-    let randomTrack = shuffleArray(array);
-    let id = randomTrack[0];
+//     let randomTrack = shuffleArray(array);
+//     let id = randomTrack[0];
     
-    //console.log('id1', id)
-    if(id === previousArrayCheck[0]) {
-      //console.log("DUPLICATE!!!")
+//     //console.log('id1', id)
+//     if(id === previousArrayCheck[0]) {
+//       //console.log("DUPLICATE!!!")
 
-      while (id === previousArrayCheck[0]) {
-        //console.log("WHILE DUPLICATE!!!")
-        randomTrack = shuffleArray(array);
-        id = randomTrack[0];
-        //console.log('id2', id)
-      }
-    }
-    //id.play();
-    return id;
-  }
-}
+//       while (id === previousArrayCheck[0]) {
+//         //console.log("WHILE DUPLICATE!!!")
+//         randomTrack = shuffleArray(array);
+//         id = randomTrack[0];
+//         //console.log('id2', id)
+//       }
+//     }
+//     id.play();
+//     return id;
+//   }
+// }
 
 // Disable/Enable Button
 function toggleButton(num) {
@@ -229,36 +229,37 @@ function updateScore(playerChoice) {
       if(playerScoreNumber % 5 == 0 && playerScoreNumber % 50 !== 0 && playerScoreNumber % 100 !== 0 && playerScoreNumber % 1000 !== 0) {
         resultText.textContent = `You Won, Keep Going!`;
         let soundWin5 = randomSound(soundArrayWin5);
-        soundWin5.play()
+        soundWin5[0].play()
         if(playerScoreNumber % 10 !== 0 && playerScoreNumber % 20 !== 0 && playerScoreNumber % 50 !== 0 && playerScoreNumber % 100 !== 0 && playerScoreNumber % 1000 !== 0) {
-          let soundDuration = Math.floor(soundWin5.duration) * 1000;
+          let soundDuration = Math.floor(soundWin5[0].duration) * 1000;
           toggleButton(soundDuration > 1000 ? (soundDuration - 500) : 500);
         }
       }
       if(playerScoreNumber % 10 == 0 && playerScoreNumber % 50 !== 0 && playerScoreNumber % 100 !== 0 && playerScoreNumber % 1000 !== 0) {
         resultText.textContent = `You Won ${playerScoreNumber} rounds!`;
         let soundWin10 = randomSound(soundArrayWin10);
-        soundWin10.play()
-        toggleButton(Math.floor(soundWin10.duration) * 1000 - 500);
+        soundWin10[0].play()
+        toggleButton(Math.floor(soundWin10[0].duration) * 1000 - 500);
         colorGirl.style.visibility = 'visible';
         startConfetti();
       }
       if(playerScoreNumber % 20 == 0 && playerScoreNumber % 100 !== 0 && playerScoreNumber % 1000 !== 0) {
-        randomSound(soundArrayWin20);
+        let soundWin20 = randomSound(soundArrayWin20);
+        soundWin20[0].play()
       }
       if(playerScoreNumber % 50 == 0 && playerScoreNumber % 100 !== 0 && playerScoreNumber % 1000 !== 0) {
         resultText.textContent = `You Won ${playerScoreNumber} rounds!`;
         let soundWin50 = randomSound(soundArrayWin50);
-        soundWin50.play()
-        toggleButton(Math.floor(soundWin50.duration) * 1000 - 500);
+        soundWin50[0].play()
+        toggleButton(Math.floor(soundWin50[0].duration) * 1000 - 500);
         colorGirl.style.visibility = 'visible';
         startConfetti();
       }
       if(playerScoreNumber % 100 == 0 && playerScoreNumber % 1000 !== 0) {
         resultText.textContent = `Wow You Won ${playerScoreNumber} rounds!`;
         let soundWin100 = randomSound(soundArrayWin100);
-        soundWin100.play()
-        toggleButton(Math.floor(soundWin100.duration) * 1000 - 500);
+        soundWin100[0].play()
+        toggleButton(Math.floor(soundWin100[0].duration) * 1000 - 500);
         colorGirl.style.visibility = 'visible';
         startConfetti();
       }
@@ -280,41 +281,42 @@ function updateScore(playerChoice) {
       if(computerScoreNumber % 5 == 0 && computerScoreNumber % 50 !== 0 && computerScoreNumber % 100 !== 0 && computerScoreNumber % 1000 !== 0) {
         resultText.textContent = `You Lost, Don't Give Up!`;
         let soundLose5 = randomSound(soundArrayLose5);
-        soundLose5.play()
+        soundLose5[0].play()
         if(computerScoreNumber % 10 !== 0 && computerScoreNumber % 20 !== 0 && computerScoreNumber % 50 !== 0 && computerScoreNumber % 100 !== 0 && computerScoreNumber % 1000 !== 0) {
-          let soundDuration = Math.floor(soundLose5.duration) * 1000;
+          let soundDuration = Math.floor(soundLose5[0].duration) * 1000;
           toggleButton(soundDuration > 1000 ? (soundDuration - 500) : 500);
         }
       }
       if(computerScoreNumber % 10 == 0 && computerScoreNumber % 50 !== 0 && computerScoreNumber % 100 !== 0 && computerScoreNumber % 1000 !== 0) {
         resultText.textContent = `You Lost ${computerScoreNumber} rounds...`;
         let soundLose10 = randomSound(soundArrayLose10);
-        soundLose10.play()
-        toggleButton(Math.floor(soundLose10.duration) * 1000 - 500);
+        soundLose10[0].play()
+        toggleButton(Math.floor(soundLose10[0].duration) * 1000 - 500);
         chunLi.style.visibility = 'visible';
       }
       if(computerScoreNumber % 20 == 0 && computerScoreNumber % 100 !== 0 && computerScoreNumber % 1000 !== 0) {
-        randomSound(soundArrayLose20);
+        let soundLose20 = randomSound(soundArrayLose20);
+        soundLose20[0].play()
       }
       if(computerScoreNumber % 50 == 0 && computerScoreNumber % 100 !== 0 && computerScoreNumber % 1000 !== 0) {
         resultText.textContent = `You Lost ${computerScoreNumber} rounds :(`;
         let soundLose50 = randomSound(soundArrayLose50);
-        soundLose50.play()
-        toggleButton(Math.floor(soundLose50.duration) * 1000 - 500);
+        soundLose50[0].play()
+        toggleButton(Math.floor(soundLose50[0].duration) * 1000 - 500);
         chunLi.style.visibility = 'visible';
       }
       if(computerScoreNumber % 100 == 0 && computerScoreNumber % 1000 !== 0) {
         resultText.textContent = `You Lost ${computerScoreNumber} rounds 😢`;
         let soundLose100 = randomSound(soundArrayLose100);
-        soundLose100.play()
-        toggleButton(Math.floor(soundLose100.duration) * 1000 - 500);
+        soundLose100[0].play()
+        toggleButton(Math.floor(soundLose100[0].duration) * 1000 - 500);
         chunLi.style.visibility = 'visible';
       }
       if(computerScoreNumber === 1000) {
         resultText.textContent = `You Lost ${computerScoreNumber} times O_O`;
         resultText2.textContent = `GAME OVER`;
         let soundLose1000 = randomSound(soundArrayLose1000);
-        soundLose1000.play()
+        soundLose1000[0].play()
         chunLi.style.visibility = 'visible';
         allGameIcon.forEach(icon => {
           icon.classList.add('disabled');
