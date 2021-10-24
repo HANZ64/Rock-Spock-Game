@@ -1,136 +1,259 @@
 export const buttonSound = new Audio('https://www.mboxdrive.com/click.mp3');
 
 // 5 Win Sounds
-// const animeGirlYes_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-yes.mp3');
-// const animeGirlYay_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-yay.mp3');
-// const animeGirlUwu_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-uwu.mp3');
-// const catGirlNya_5WinSound = new Audio('https://www.mboxdrive.com/5win-cat-girl-nya.mp3');
-const animeGirlYes_5WinSound = new Audio('./sounds/5win-anime-girl-yes.mp3');
-const animeGirlYay_5WinSound = new Audio('./sounds/5win-anime-girl-yay.mp3');
-const animeGirlUwu_5WinSound = new Audio('./sounds/5win-anime-girl-uwu.mp3');
-const catGirlNya_5WinSound = new Audio('./sounds/5win-cat-girl-nya.mp3');
-const tututuAnime_5WinSound = new Audio('./sounds/5win-tututu-anime.mp3');
-const gudjob_5WinSound = new Audio('./sounds/5win-gudjob.mp3');
-const sonicRingSound_5WinSound = new Audio('./sounds/5win-sonic-ring-sound.mp3');
-const luigiYes_5WinSound = new Audio('./sounds/5win-luigi-yes.mp3');
-const marioYahoo_5WinSound = new Audio('./sounds/5win-mario-yahoo.mp3');
-const luigiYahoo_5WinSound = new Audio('./sounds/5win-luigi-yahoo.mp3');
-const marioCoinOne_5WinSound = new Audio('./sounds/5win-mario-coin-1.mp3');
-const marioCoinTwo_5WinSound = new Audio('./sounds/5win-mario-coin-2.mp3');
-const animeWowNoBackground_5WinSound = new Audio('./sounds/5win-anime-wow-no-background.mp3');
-const pokemonLevelUp_5WinSound = new Audio('./sounds/5win-pokemon-level-up.mp3');
-const kaChing_5WinSound = new Audio('./sounds/5win-ka-ching.mp3');
-const cashRegister_5WinSound = new Audio('./sounds/5win-cash-register.mp3');
-const buttonEffect_5WinSound = new Audio('./sounds/5win-button-effect.mp3');
-const metalGearSolidItemDrop_5WinSound = new Audio('./sounds/5win-metal-gear-solid-item-drop.mp3');
-const flappyBirdPoint_5WinSound = new Audio('./sounds/5win-flappy-bird-point.mp3');
-const animeGirlGiggleOne_5WinSound = new Audio('./sounds/5win-anime-girl-giggle-1.mp3');
-const animeGirlGiggleTwo_5WinSound = new Audio('./sounds/5win-anime-girl-giggle-2.mp3');
-const animeGirlGiggleThree_5WinSound = new Audio('./sounds/5win-anime-girl-giggle-3.mp3');
-const animeGirlGiggleFour_5WinSound = new Audio('./sounds/5win-anime-girl-giggle-4.mp3');
-const girlYay_5WinSound = new Audio('./sounds/5win-girl-yay.mp3');
-const starsteps_5WinSound = new Audio('./sounds/5win-starsteps.mp3');
-const mortalKombatToasty_5WinSound = new Audio('./sounds/5win-mortal-kombat-toasty.mp3');
-const animeGirlBareMashita_5WinSound = new Audio('./sounds/5win-anime-girl-bare-mashita.mp3');
-const pikachuOne_5WinSound = new Audio('./sounds/5win-pikachu-1.mp3');
-const animeAlert_5WinSound = new Audio('./sounds/5win-anime-alert.mp3');
-const totsugeki_5WinSound = new Audio('./sounds/5win-totsugeki-charge.mp3');
-const legendOfZeldaRupee_5WinSound = new Audio('./sounds/5win-legend-of-zelda-rupee.mp3');
-const legendOfZeldaSecret_5WinSound = new Audio('./sounds/5win-legend-of-zelda-secret.mp3');
-const crashBandicootOneUp_5WinSound = new Audio('./sounds/5win-crash-bandicoot-1up.mp3');
-const streetFighterPerfect_5WinSound = new Audio('./sounds/5win-street-fighter-perfect.mp3');
-const streetFighterCoin_5WinSound = new Audio('./sounds/5win-street-fighter-coin.mp3');
-const streetFighterRyuHadouken_5WinSound = new Audio('./sounds/5win-street-fighter-ryu-hadouken.mp3');
-const streetFighterRyuHadoukenClassic_5WinSound = new Audio('./sounds/5win-street-fighter-ryu-hadouken-classic.mp3');
-const streetFighterKenShoryuken_5WinSound = new Audio('./sounds/5win-street-fighter-ken-shoryuken.mp3');
-const streetFighterChunliKikoken_5WinSound = new Audio('./sounds/5win-street-fighter-chun-li-kikoken.mp3');
-const streetFighterChunliLaugh_5WinSound = new Audio('./sounds/5win-street-fighter-chun-li-laugh.mp3');
-const streetFighterChunliYay_5WinSound = new Audio('./sounds/5win-street-fighter-chun-li-yay.mp3');
-const sakuraHadouken_5WinSound = new Audio('./sounds/5win-sakura-hadouken.mp3');
-const brainTrainingRightAnswer_5WinSound = new Audio('./sounds/5win-brain-training-right-answer.mp3');
-const sailorMoonEffectOne_5WinSound = new Audio('./sounds/5win-sailor-moon-effect-1.mp3');
-const sailorMoonAlertTwo_5WinSound = new Audio('./sounds/5win-sailor-moon-effect-2.mp3');
-const sailorMoonAlertThree_5WinSound = new Audio('./sounds/5win-sailor-moon-effect-3.mp3');
-const success_5WinSound = new Audio('./sounds/5win-success.mp3');
-const applePay_5WinSound = new Audio('./sounds/5win-apple-pay.mp3');
-const sm64SoLongBowser_5WinSound = new Audio('./sounds/5win-super-mario-64-so-long-bowser.mp3');
-const sm64Sparkle_5WinSound = new Audio('./sounds/5win-super-mario-64-sparkle.mp3');
-const sm64LetsGo_5WinSound = new Audio('./sounds/5win-super-mario-64-lets-go.mp3');
-const marioMushroomOne_5WinSound = new Audio('./sounds/5win-mario-mushroom-1.mp3');
-const marioMushroomTwo_5WinSound = new Audio('./sounds/5win-mario-mushroom-2.mp3');
-const mario1Up_5WinSound = new Audio('./sounds/5win-mario-1up.mp3');
-const ffxivChocoboWark_5WinSound = new Audio('./sounds/5win-ffxiv-chocobo-wark.mp3');
-const marioJustWhatINeeded_5WinSound = new Audio('./sounds/5win-mario-just-what-i-needed.mp3');
-const eeveeOne_5WinSound = new Audio('./sounds/5win-eevee-1.mp3');
-const warioExcellent_5WinSound = new Audio('./sounds/5win-wario-excellent.mp3');
-const sm64YipeeOne_5WinSound = new Audio('./sounds/5win-super-mario-64-yipee-1.mp3');
-const sm64YipeeTwo_5WinSound = new Audio('./sounds/5win-super-mario-64-yipee-2.mp3');
-const marioPause_5WinSound = new Audio('./sounds/5win-mario-pause.mp3');
-const warioWonderful_5WinSound = new Audio('./sounds/5win-wario-wonderful.mp3');
-const nice_5WinSound = new Audio('./sounds/5win-nice.mp3');
-const guileSonicBoom_5WinSound = new Audio('./sounds/5win-street-fighter-guile-sonic-boom.mp3');
-const yippeeKiYay_5WinSound = new Audio('./sounds/5win-yippee-ki-yay.mp3');
-const hastalavistaBaby_5WinSound = new Audio('./sounds/5win-hasta-lavista-baby.mp3');
-const excellent_5WinSound = new Audio('./sounds/5win-excellent.mp3');
-const animeGirlSugoi_5WinSound = new Audio('./sounds/5win-anime-girl-sugoi.mp3');
-const sheldonCooperBazinga_5WinSound = new Audio('./sounds/5win-sheldon-cooper-bazinga.mp3');
-const patrickYeahUhHuh_5WinSound = new Audio('./sounds/5win-patrick-yeah-uh-huh.mp3');
-const akihikoIveBeenWaitingForThis_5WinSound = new Audio('./sounds/5win-akihiko-ive-been-waiting-for-this.mp3');
-const nonoHellYeah_5WinSound = new Audio('./sounds/5win-nono-hell-yeah.mp3');
-const woomy_5WinSound = new Audio('./sounds/5win-woomy.mp3');
-const marioRedCoin_5WinSound = new Audio('./sounds/5win-mario-red-coin.mp3');
-const arcadeCoinOne_5WinSound = new Audio('./sounds/5win-arcade-coin-1.mp3');
-const arcadeCoinTwo_5WinSound = new Audio('./sounds/5win-arcade-coin-2.mp3');
-const arcadeCoinThree_5WinSound = new Audio('./sounds/5win-arcade-coin-3.mp3');
-const arcadeCoinFour_5WinSound = new Audio('./sounds/5win-arcade-coin-4.mp3');
-const neoGeoCoinOne_5WinSound = new Audio('./sounds/5win-neo-geo-coin-1.mp3');
-const neoGeoCoinTwo_5WinSound = new Audio('./sounds/5win-neo-geo-coin-2.mp3');
-const sonicCoin_5WinSound = new Audio('./sounds/5win-sonic-coin.mp3');
-const arcadeWinOne_5WinSound = new Audio('./sounds/5win-arcade-win-1.mp3');
-const arcadeWinTwo_5WinSound = new Audio('./sounds/5win-arcade-win-2.mp3');
-const yoshiOne_5WinSound = new Audio('./sounds/5win-yoshi-1.mp3');
-const yoshiTwo_5WinSound = new Audio('./sounds/5win-yoshi-2.mp3');
-const yoshiThree_5WinSound = new Audio('./sounds/5win-yoshi-3.mp3');
-const yoshiFour_5WinSound = new Audio('./sounds/5win-yoshi-4.mp3');
-const metalSlugThankYou_5WinSound = new Audio('./sounds/5win-metal-slug-thank-you.mp3');
-const metalSlugOk_5WinSound = new Audio('./sounds/5win-metal-slug-ok.mp3');
-const metalSlugBingo_5WinSound = new Audio('./sounds/5win-metal-slug-bingo.mp3');
-const jojoYes_5WinSound = new Audio('./sounds/5win-jojo-yes.mp3');
-const cvsnkRyuHadouken_5WinSound = new Audio('./sounds/5win-cvsnk-ryu-hadouken-waving-fist.mp3');
-const cvsnkRyuShouryuuken_5WinSound = new Audio('./sounds/5win-cvsnk-ryu-shouryuuken-rising-dragon-fist.mp3');
-const cvsnkKenYay_5WinSound = new Audio('./sounds/5win-cvsnk-ken-yay.mp3');
-const cvsnkKenIDidIt_5WinSound = new Audio('./sounds/5win-cvsnk-ken-i-did-it.mp3');
-const cvsnkChunLiLaugh_5WinSound = new Audio('./sounds/5win-cvsnk-chun-li-laugh.mp3');
-const cvsnkChunLiHereIGo_5WinSound = new Audio('./sounds/5win-cvsnk-chun-li-here-i-go.mp3');
-const cvsnkSakuraLetsGo_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-lets-go.mp3');
-const cvsnkSakuraThatsHowItsDone_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-thats-how-its-done.mp3');
-const cvsnkSakuraGiggle_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-giggle.mp3');
-const cvsnkSakuraLaugh_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-laugh.mp3');
-const cvsnkSakuraYup_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-yup.mp3');
-const cvsnkSakuraHereIGo_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-here-i-go.mp3');
-const cvsnkDanSuperPieceOfCake_5WinSound = new Audio('./sounds/5win-cvsnk-dan-super-piece-of-cake.mp3');
-const cvsnkMaiJapansFinest_5WinSound = new Audio('./sounds/5win-cvsnk-mai-japans-finest.mp3');
-const cvsnkMaiKachousen_5WinSound = new Audio('./sounds/5win-cvsnk-mai-kachousen-flower-butterfly-fan.mp3');
-const cvsnkYuriHereHere_5WinSound = new Audio('./sounds/5win-cvsnk-yuri-here-here.mp3');
-const cvsnkYuriPieceOfCake_5WinSound = new Audio('./sounds/5win-cvsnk-yuri-piece-of-cake.mp3');
-const cvsnkYuriKouken_5WinSound = new Audio('./sounds/5win-cvsnk-yuri-kouken-tiger-glowing-fist.mp3');
-const cvsnkYuriChouappaaOne_5WinSound = new Audio('./sounds/5win-cvsnk-yuri-chouappaa-super-upper-1.mp3');
-const cvsnkYuriChouappaaTwo_5WinSound = new Audio('./sounds/5win-cvsnk-yuri-chouappaa-super-upper-2.mp3');
-const cvsnkAthenaHereComesAthena_5WinSound = new Audio('./sounds/5win-cvsnk-athena-here-comes-athena.mp3');
-const cvsnkAthenaGanbarimasu_5WinSound = new Audio('./sounds/5lose-cvsnk-athena-ganbarimasu-ill-do-my-best.mp3');
-const cvsnkAthenaYayPerfect_5WinSound = new Audio('./sounds/5win-cvsnk-athena-yay-perfect.mp3');
-const cvsnkAthenaIDidItGood_5WinSound = new Audio('./sounds/5win-cvsnk-athena-i-did-it-good.mp3');
-const cvsnkAthenaPsychoBall_5WinSound = new Audio('./sounds/5win-cvsnk-athena-psycho-ball.mp3');
-const cvsnkAthenaPsychoSword_5WinSound = new Audio('./sounds/5win-cvsnk-athena-psycho-sword.mp3');
-const kof99AthenaShowtime_5WinSound = new Audio('./sounds/5win-kof99-athena-showtime.mp3');
-const cvsnkNakoruruThankYou_5WinSound = new Audio('./sounds/5win-cvsnk-nakoruru-thank-you.mp3');
-const luigiNumberOne_5WinSound = new Audio('./sounds/5win-im-luigi-number-one.mp3');
-const superLuigi_5WinSound = new Audio('./sounds/5win-super-luigi.mp3');
-const cheeredUpToad_5WinSound = new Audio('./sounds/5win-cheered-up-toad.mp3');
-const correctBuzzer_5WinSound = new Audio('./sounds/5win-correct-buzzer.mp3');
-const sf2YouWin_5WinSound = new Audio('./sounds/5win-sf2-you-win.mp3');
-const ssf2YouWin_5WinSound = new Audio('./sounds/5win-ssf2-you-win.mp3');
-const ssf2Perfect_5WinSound = new Audio('./sounds/5win-ssf2-perfect.mp3');
+const animeGirlYes_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-yes.mp3');
+const animeGirlYay_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-yay.mp3');
+const animeGirlUwu_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-uwu.mp3');
+const catGirlNya_5WinSound = new Audio('https://www.mboxdrive.com/5win-cat-girl-nya.mp3');
+const tututuAnime_5WinSound = new Audio('https://www.mboxdrive.com/5win-tututu-anime.mp3');
+const gudjob_5WinSound = new Audio('https://www.mboxdrive.com/5win-gudjob.mp3');
+const sonicRingSound_5WinSound = new Audio('https://www.mboxdrive.com/5win-sonic-ring-sound.mp3');
+const luigiYes_5WinSound = new Audio('https://www.mboxdrive.com/5win-luigi-yes.mp3');
+const marioYahoo_5WinSound = new Audio('https://www.mboxdrive.com/5win-mario-yahoo.mp3');
+const luigiYahoo_5WinSound = new Audio('https://www.mboxdrive.com/5win-luigi-yahoo.mp3');
+const marioCoinOne_5WinSound = new Audio('https://www.mboxdrive.com/5win-mario-coin-1.mp3');
+const marioCoinTwo_5WinSound = new Audio('https://www.mboxdrive.com/5win-mario-coin-2.mp3');
+const animeWowNoBackground_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-wow-no-background.mp3');
+const pokemonLevelUp_5WinSound = new Audio('https://www.mboxdrive.com/5win-pokemon-level-up.mp3');
+const kaChing_5WinSound = new Audio('https://www.mboxdrive.com/5win-ka-ching.mp3');
+const cashRegister_5WinSound = new Audio('https://www.mboxdrive.com/5win-cash-register.mp3');
+const buttonEffect_5WinSound = new Audio('https://www.mboxdrive.com/5win-button-effect.mp3');
+const metalGearSolidItemDrop_5WinSound = new Audio('https://www.mboxdrive.com/5win-metal-gear-solid-item-drop.mp3');
+const flappyBirdPoint_5WinSound = new Audio('https://www.mboxdrive.com/5win-flappy-bird-point.mp3');
+const animeGirlGiggleOne_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-giggle-1.mp3');
+const animeGirlGiggleTwo_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-giggle-2.mp3');
+const animeGirlGiggleThree_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-giggle-3.mp3');
+const animeGirlGiggleFour_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-giggle-4.mp3');
+const girlYay_5WinSound = new Audio('https://www.mboxdrive.com/5win-girl-yay.mp3');
+const starsteps_5WinSound = new Audio('https://www.mboxdrive.com/5win-starsteps.mp3');
+const mortalKombatToasty_5WinSound = new Audio('https://www.mboxdrive.com/5win-mortal-kombat-toasty.mp3');
+const animeGirlBareMashita_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-girl-bare-mashita.mp3');
+const pikachuOne_5WinSound = new Audio('https://www.mboxdrive.com/5win-pikachu-1.mp3');
+const animeAlert_5WinSound = new Audio('https://www.mboxdrive.com/5win-anime-alert.mp3');
+const totsugeki_5WinSound = new Audio('https://www.mboxdrive.com/5win-totsugeki-charge.mp3');
+const legendOfZeldaRupee_5WinSound = new Audio('https://www.mboxdrive.com/5win-legend-of-zelda-rupee.mp3');
+const legendOfZeldaSecret_5WinSound = new Audio('https://www.mboxdrive.com/5win-legend-of-zelda-secret.mp3');
+const crashBandicootOneUp_5WinSound = new Audio('https://www.mboxdrive.com/5win-crash-bandicoot-1up.mp3');
+const streetFighterPerfect_5WinSound = new Audio('https://www.mboxdrive.com/5win-street-fighter-perfect.mp3');
+const streetFighterCoin_5WinSound = new Audio('https://www.mboxdrive.com/5win-street-fighter-coin.mp3');
+const streetFighterRyuHadouken_5WinSound = new Audio('https://www.mboxdrive.com/5win-street-fighter-ryu-hadouken.mp3');
+const streetFighterRyuHadoukenClassic_5WinSound = new Audio('https://www.mboxdrive.com/5win-street-fighter-ryu-hadouken-classic.mp3');
+const streetFighterKenShoryuken_5WinSound = new Audio('https://www.mboxdrive.com/5win-street-fighter-ken-shoryuken.mp3');
+const streetFighterChunliKikoken_5WinSound = new Audio('https://www.mboxdrive.com/5win-street-fighter-chun-li-kikoken.mp3');
+const streetFighterChunliLaugh_5WinSound = new Audio('https://www.mboxdrive.com/5win-street-fighter-chun-li-laugh.mp3');
+const streetFighterChunliYay_5WinSound = new Audio('https://www.mboxdrive.com/5win-street-fighter-chun-li-yay.mp3');
+const sakuraHadouken_5WinSound = new Audio('https://www.mboxdrive.com/5win-sakura-hadouken.mp3');
+const brainTrainingRightAnswer_5WinSound = new Audio('https://www.mboxdrive.com/5win-brain-training-right-answer.mp3');
+const sailorMoonEffectOne_5WinSound = new Audio('https://www.mboxdrive.com/5win-sailor-moon-effect-1.mp3');
+const sailorMoonAlertTwo_5WinSound = new Audio('https://www.mboxdrive.com/5win-sailor-moon-effect-2.mp3');
+const sailorMoonAlertThree_5WinSound = new Audio('https://www.mboxdrive.com/5win-sailor-moon-effect-3.mp3');
+const success_5WinSound = new Audio('https://www.mboxdrive.com/5win-success.mp3');
+const applePay_5WinSound = new Audio('https://www.mboxdrive.com/5win-apple-pay.mp3');
+const sm64SoLongBowser_5WinSound = new Audio('https://www.mboxdrive.com/5win-super-mario-64-so-long-bowser.mp3');
+const sm64Sparkle_5WinSound = new Audio('https://www.mboxdrive.com/10win-sparkle.mp3');
+const sm64LetsGo_5WinSound = new Audio('https://www.mboxdrive.com/5win-super-mario-64-lets-go.mp3');
+const marioMushroomOne_5WinSound = new Audio('https://www.mboxdrive.com/5win-mario-mushroom-1.mp3');
+const marioMushroomTwo_5WinSound = new Audio('https://www.mboxdrive.com/5win-mario-mushroom-2.mp3');
+const mario1Up_5WinSound = new Audio('https://www.mboxdrive.com/5win-mario-1up.mp3');
+const ffxivChocoboWark_5WinSound = new Audio('https://www.mboxdrive.com/5win-ffxiv-chocobo-wark.mp3');
+const marioJustWhatINeeded_5WinSound = new Audio('https://www.mboxdrive.com/5win-mario-just-what-i-needed.mp3');
+const eeveeOne_5WinSound = new Audio('https://www.mboxdrive.com/5win-eevee-1.mp3');
+const warioExcellent_5WinSound = new Audio('https://www.mboxdrive.com/5win-wario-excellent.mp3');
+const sm64YipeeOne_5WinSound = new Audio('https://www.mboxdrive.com/5win-super-mario-64-yipee-1.mp3');
+const sm64YipeeTwo_5WinSound = new Audio('https://www.mboxdrive.com/5win-super-mario-64-yipee-2.mp3');
+const marioPause_5WinSound = new Audio('https://www.mboxdrive.com/5win-mario-pause.mp3');
+//const warioWonderful_5WinSound = new Audio('./sounds/5win-wario-wonderful.mp3');
+//const nice_5WinSound = new Audio('./sounds/5win-nice.mp3');
+//const guileSonicBoom_5WinSound = new Audio('./sounds/5win-street-fighter-guile-sonic-boom.mp3');
+//const yippeeKiYay_5WinSound = new Audio('./sounds/5win-yippee-ki-yay.mp3');
+// const hastalavistaBaby_5WinSound = new Audio('./sounds/5win-hasta-lavista-baby.mp3');
+// const excellent_5WinSound = new Audio('./sounds/5win-excellent.mp3');
+// const animeGirlSugoi_5WinSound = new Audio('./sounds/5win-anime-girl-sugoi.mp3');
+// const sheldonCooperBazinga_5WinSound = new Audio('./sounds/5win-sheldon-cooper-bazinga.mp3');
+// const patrickYeahUhHuh_5WinSound = new Audio('./sounds/5win-patrick-yeah-uh-huh.mp3');
+// const akihikoIveBeenWaitingForThis_5WinSound = new Audio('./sounds/5win-akihiko-ive-been-waiting-for-this.mp3');
+// const nonoHellYeah_5WinSound = new Audio('./sounds/5win-nono-hell-yeah.mp3');
+// const woomy_5WinSound = new Audio('./sounds/5win-woomy.mp3');
+// const marioRedCoin_5WinSound = new Audio('./sounds/5win-mario-red-coin.mp3');
+// const arcadeCoinOne_5WinSound = new Audio('./sounds/5win-arcade-coin-1.mp3');
+// const arcadeCoinTwo_5WinSound = new Audio('./sounds/5win-arcade-coin-2.mp3');
+// const arcadeCoinThree_5WinSound = new Audio('./sounds/5win-arcade-coin-3.mp3');
+// const arcadeCoinFour_5WinSound = new Audio('./sounds/5win-arcade-coin-4.mp3');
+// const neoGeoCoinOne_5WinSound = new Audio('./sounds/5win-neo-geo-coin-1.mp3');
+// const neoGeoCoinTwo_5WinSound = new Audio('./sounds/5win-neo-geo-coin-2.mp3');
+// const sonicCoin_5WinSound = new Audio('./sounds/5win-sonic-coin.mp3');
+// const arcadeWinOne_5WinSound = new Audio('./sounds/5win-arcade-win-1.mp3');
+// const arcadeWinTwo_5WinSound = new Audio('./sounds/5win-arcade-win-2.mp3');
+// const yoshiOne_5WinSound = new Audio('./sounds/5win-yoshi-1.mp3');
+// const yoshiTwo_5WinSound = new Audio('./sounds/5win-yoshi-2.mp3');
+// const yoshiThree_5WinSound = new Audio('./sounds/5win-yoshi-3.mp3');
+// const yoshiFour_5WinSound = new Audio('./sounds/5win-yoshi-4.mp3');
+// const metalSlugThankYou_5WinSound = new Audio('./sounds/5win-metal-slug-thank-you.mp3');
+// const metalSlugOk_5WinSound = new Audio('./sounds/5win-metal-slug-ok.mp3');
+// const metalSlugBingo_5WinSound = new Audio('./sounds/5win-metal-slug-bingo.mp3');
+// const jojoYes_5WinSound = new Audio('./sounds/5win-jojo-yes.mp3');
+// const cvsnkRyuHadouken_5WinSound = new Audio('./sounds/5win-cvsnk-ryu-hadouken-waving-fist.mp3');
+// const cvsnkRyuShouryuuken_5WinSound = new Audio('./sounds/5win-cvsnk-ryu-shouryuuken-rising-dragon-fist.mp3');
+// const cvsnkKenYay_5WinSound = new Audio('./sounds/5win-cvsnk-ken-yay.mp3');
+// const cvsnkKenIDidIt_5WinSound = new Audio('./sounds/5win-cvsnk-ken-i-did-it.mp3');
+// const cvsnkChunLiLaugh_5WinSound = new Audio('./sounds/5win-cvsnk-chun-li-laugh.mp3');
+// const cvsnkChunLiHereIGo_5WinSound = new Audio('./sounds/5win-cvsnk-chun-li-here-i-go.mp3');
+// const cvsnkSakuraLetsGo_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-lets-go.mp3');
+// const cvsnkSakuraThatsHowItsDone_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-thats-how-its-done.mp3');
+// const cvsnkSakuraGiggle_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-giggle.mp3');
+// const cvsnkSakuraLaugh_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-laugh.mp3');
+// const cvsnkSakuraYup_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-yup.mp3');
+// const cvsnkSakuraHereIGo_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-here-i-go.mp3');
+// const cvsnkDanSuperPieceOfCake_5WinSound = new Audio('./sounds/5win-cvsnk-dan-super-piece-of-cake.mp3');
+// const cvsnkMaiJapansFinest_5WinSound = new Audio('./sounds/5win-cvsnk-mai-japans-finest.mp3');
+// const cvsnkMaiKachousen_5WinSound = new Audio('./sounds/5win-cvsnk-mai-kachousen-flower-butterfly-fan.mp3');
+// const cvsnkYuriHereHere_5WinSound = new Audio('./sounds/5win-cvsnk-yuri-here-here.mp3');
+// const cvsnkYuriPieceOfCake_5WinSound = new Audio('./sounds/5win-cvsnk-yuri-piece-of-cake.mp3');
+// const cvsnkYuriKouken_5WinSound = new Audio('./sounds/5win-cvsnk-yuri-kouken-tiger-glowing-fist.mp3');
+// const cvsnkYuriChouappaaOne_5WinSound = new Audio('./sounds/5win-cvsnk-yuri-chouappaa-super-upper-1.mp3');
+// const cvsnkYuriChouappaaTwo_5WinSound = new Audio('./sounds/5win-cvsnk-yuri-chouappaa-super-upper-2.mp3');
+// const cvsnkAthenaHereComesAthena_5WinSound = new Audio('./sounds/5win-cvsnk-athena-here-comes-athena.mp3');
+// const cvsnkAthenaGanbarimasu_5WinSound = new Audio('./sounds/5lose-cvsnk-athena-ganbarimasu-ill-do-my-best.mp3');
+// const cvsnkAthenaYayPerfect_5WinSound = new Audio('./sounds/5win-cvsnk-athena-yay-perfect.mp3');
+// const cvsnkAthenaIDidItGood_5WinSound = new Audio('./sounds/5win-cvsnk-athena-i-did-it-good.mp3');
+// const cvsnkAthenaPsychoBall_5WinSound = new Audio('./sounds/5win-cvsnk-athena-psycho-ball.mp3');
+// const cvsnkAthenaPsychoSword_5WinSound = new Audio('./sounds/5win-cvsnk-athena-psycho-sword.mp3');
+// const kof99AthenaShowtime_5WinSound = new Audio('./sounds/5win-kof99-athena-showtime.mp3');
+// const cvsnkNakoruruThankYou_5WinSound = new Audio('./sounds/5win-cvsnk-nakoruru-thank-you.mp3');
+// const luigiNumberOne_5WinSound = new Audio('./sounds/5win-im-luigi-number-one.mp3');
+// const superLuigi_5WinSound = new Audio('./sounds/5win-super-luigi.mp3');
+// const cheeredUpToad_5WinSound = new Audio('./sounds/5win-cheered-up-toad.mp3');
+// const correctBuzzer_5WinSound = new Audio('./sounds/5win-correct-buzzer.mp3');
+// const sf2YouWin_5WinSound = new Audio('./sounds/5win-sf2-you-win.mp3');
+// const ssf2YouWin_5WinSound = new Audio('./sounds/5win-ssf2-you-win.mp3');
+// const ssf2Perfect_5WinSound = new Audio('./sounds/5win-ssf2-perfect.mp3');
+
+// const animeGirlYes_5WinSound = new Audio('./sounds/5win-anime-girl-yes.mp3');
+// const animeGirlYay_5WinSound = new Audio('./sounds/5win-anime-girl-yay.mp3');
+// const animeGirlUwu_5WinSound = new Audio('./sounds/5win-anime-girl-uwu.mp3');
+// const catGirlNya_5WinSound = new Audio('./sounds/5win-cat-girl-nya.mp3');
+// const tututuAnime_5WinSound = new Audio('./sounds/5win-tututu-anime.mp3');
+// const gudjob_5WinSound = new Audio('./sounds/5win-gudjob.mp3');
+// const sonicRingSound_5WinSound = new Audio('./sounds/5win-sonic-ring-sound.mp3');
+// const luigiYes_5WinSound = new Audio('./sounds/5win-luigi-yes.mp3');
+// const marioYahoo_5WinSound = new Audio('./sounds/5win-mario-yahoo.mp3');
+// const luigiYahoo_5WinSound = new Audio('./sounds/5win-luigi-yahoo.mp3');
+// const marioCoinOne_5WinSound = new Audio('./sounds/5win-mario-coin-1.mp3');
+// const marioCoinTwo_5WinSound = new Audio('./sounds/5win-mario-coin-2.mp3');
+// const animeWowNoBackground_5WinSound = new Audio('./sounds/5win-anime-wow-no-background.mp3');
+// const pokemonLevelUp_5WinSound = new Audio('./sounds/5win-pokemon-level-up.mp3');
+// const kaChing_5WinSound = new Audio('./sounds/5win-ka-ching.mp3');
+// const cashRegister_5WinSound = new Audio('./sounds/5win-cash-register.mp3');
+// const buttonEffect_5WinSound = new Audio('./sounds/5win-button-effect.mp3');
+// const metalGearSolidItemDrop_5WinSound = new Audio('./sounds/5win-metal-gear-solid-item-drop.mp3');
+// const flappyBirdPoint_5WinSound = new Audio('./sounds/5win-flappy-bird-point.mp3');
+// const animeGirlGiggleOne_5WinSound = new Audio('./sounds/5win-anime-girl-giggle-1.mp3');
+// const animeGirlGiggleTwo_5WinSound = new Audio('./sounds/5win-anime-girl-giggle-2.mp3');
+// const animeGirlGiggleThree_5WinSound = new Audio('./sounds/5win-anime-girl-giggle-3.mp3');
+// const animeGirlGiggleFour_5WinSound = new Audio('./sounds/5win-anime-girl-giggle-4.mp3');
+// const girlYay_5WinSound = new Audio('./sounds/5win-girl-yay.mp3');
+// const starsteps_5WinSound = new Audio('./sounds/5win-starsteps.mp3');
+// const mortalKombatToasty_5WinSound = new Audio('./sounds/5win-mortal-kombat-toasty.mp3');
+// const animeGirlBareMashita_5WinSound = new Audio('./sounds/5win-anime-girl-bare-mashita.mp3');
+// const pikachuOne_5WinSound = new Audio('./sounds/5win-pikachu-1.mp3');
+// const animeAlert_5WinSound = new Audio('./sounds/5win-anime-alert.mp3');
+// const totsugeki_5WinSound = new Audio('./sounds/5win-totsugeki-charge.mp3');
+// const legendOfZeldaRupee_5WinSound = new Audio('./sounds/5win-legend-of-zelda-rupee.mp3');
+// const legendOfZeldaSecret_5WinSound = new Audio('./sounds/5win-legend-of-zelda-secret.mp3');
+// const crashBandicootOneUp_5WinSound = new Audio('./sounds/5win-crash-bandicoot-1up.mp3');
+// const streetFighterPerfect_5WinSound = new Audio('./sounds/5win-street-fighter-perfect.mp3');
+// const streetFighterCoin_5WinSound = new Audio('./sounds/5win-street-fighter-coin.mp3');
+// const streetFighterRyuHadouken_5WinSound = new Audio('./sounds/5win-street-fighter-ryu-hadouken.mp3');
+// const streetFighterRyuHadoukenClassic_5WinSound = new Audio('./sounds/5win-street-fighter-ryu-hadouken-classic.mp3');
+// const streetFighterKenShoryuken_5WinSound = new Audio('./sounds/5win-street-fighter-ken-shoryuken.mp3');
+// const streetFighterChunliKikoken_5WinSound = new Audio('./sounds/5win-street-fighter-chun-li-kikoken.mp3');
+// const streetFighterChunliLaugh_5WinSound = new Audio('./sounds/5win-street-fighter-chun-li-laugh.mp3');
+// const streetFighterChunliYay_5WinSound = new Audio('./sounds/5win-street-fighter-chun-li-yay.mp3');
+// const sakuraHadouken_5WinSound = new Audio('./sounds/5win-sakura-hadouken.mp3');
+// const brainTrainingRightAnswer_5WinSound = new Audio('./sounds/5win-brain-training-right-answer.mp3');
+// const sailorMoonEffectOne_5WinSound = new Audio('./sounds/5win-sailor-moon-effect-1.mp3');
+// const sailorMoonAlertTwo_5WinSound = new Audio('./sounds/5win-sailor-moon-effect-2.mp3');
+// const sailorMoonAlertThree_5WinSound = new Audio('./sounds/5win-sailor-moon-effect-3.mp3');
+// const success_5WinSound = new Audio('./sounds/5win-success.mp3');
+// const applePay_5WinSound = new Audio('./sounds/5win-apple-pay.mp3');
+// const sm64SoLongBowser_5WinSound = new Audio('./sounds/5win-super-mario-64-so-long-bowser.mp3');
+// const sm64Sparkle_5WinSound = new Audio('./sounds/5win-super-mario-64-sparkle.mp3');
+// const sm64LetsGo_5WinSound = new Audio('./sounds/5win-super-mario-64-lets-go.mp3');
+// const marioMushroomOne_5WinSound = new Audio('./sounds/5win-mario-mushroom-1.mp3');
+// const marioMushroomTwo_5WinSound = new Audio('./sounds/5win-mario-mushroom-2.mp3');
+// const mario1Up_5WinSound = new Audio('./sounds/5win-mario-1up.mp3');
+// const ffxivChocoboWark_5WinSound = new Audio('./sounds/5win-ffxiv-chocobo-wark.mp3');
+// const marioJustWhatINeeded_5WinSound = new Audio('./sounds/5win-mario-just-what-i-needed.mp3');
+// const eeveeOne_5WinSound = new Audio('./sounds/5win-eevee-1.mp3');
+// const warioExcellent_5WinSound = new Audio('./sounds/5win-wario-excellent.mp3');
+// const sm64YipeeOne_5WinSound = new Audio('./sounds/5win-super-mario-64-yipee-1.mp3');
+// const sm64YipeeTwo_5WinSound = new Audio('./sounds/5win-super-mario-64-yipee-2.mp3');
+// const marioPause_5WinSound = new Audio('./sounds/5win-mario-pause.mp3');
+// const warioWonderful_5WinSound = new Audio('./sounds/5win-wario-wonderful.mp3');
+// const nice_5WinSound = new Audio('./sounds/5win-nice.mp3');
+// const guileSonicBoom_5WinSound = new Audio('./sounds/5win-street-fighter-guile-sonic-boom.mp3');
+// const yippeeKiYay_5WinSound = new Audio('./sounds/5win-yippee-ki-yay.mp3');
+// const hastalavistaBaby_5WinSound = new Audio('./sounds/5win-hasta-lavista-baby.mp3');
+// const excellent_5WinSound = new Audio('./sounds/5win-excellent.mp3');
+// const animeGirlSugoi_5WinSound = new Audio('./sounds/5win-anime-girl-sugoi.mp3');
+// const sheldonCooperBazinga_5WinSound = new Audio('./sounds/5win-sheldon-cooper-bazinga.mp3');
+// const patrickYeahUhHuh_5WinSound = new Audio('./sounds/5win-patrick-yeah-uh-huh.mp3');
+// const akihikoIveBeenWaitingForThis_5WinSound = new Audio('./sounds/5win-akihiko-ive-been-waiting-for-this.mp3');
+// const nonoHellYeah_5WinSound = new Audio('./sounds/5win-nono-hell-yeah.mp3');
+// const woomy_5WinSound = new Audio('./sounds/5win-woomy.mp3');
+// const marioRedCoin_5WinSound = new Audio('./sounds/5win-mario-red-coin.mp3');
+// const arcadeCoinOne_5WinSound = new Audio('./sounds/5win-arcade-coin-1.mp3');
+// const arcadeCoinTwo_5WinSound = new Audio('./sounds/5win-arcade-coin-2.mp3');
+// const arcadeCoinThree_5WinSound = new Audio('./sounds/5win-arcade-coin-3.mp3');
+// const arcadeCoinFour_5WinSound = new Audio('./sounds/5win-arcade-coin-4.mp3');
+// const neoGeoCoinOne_5WinSound = new Audio('./sounds/5win-neo-geo-coin-1.mp3');
+// const neoGeoCoinTwo_5WinSound = new Audio('./sounds/5win-neo-geo-coin-2.mp3');
+// const sonicCoin_5WinSound = new Audio('./sounds/5win-sonic-coin.mp3');
+// const arcadeWinOne_5WinSound = new Audio('./sounds/5win-arcade-win-1.mp3');
+// const arcadeWinTwo_5WinSound = new Audio('./sounds/5win-arcade-win-2.mp3');
+// const yoshiOne_5WinSound = new Audio('./sounds/5win-yoshi-1.mp3');
+// const yoshiTwo_5WinSound = new Audio('./sounds/5win-yoshi-2.mp3');
+// const yoshiThree_5WinSound = new Audio('./sounds/5win-yoshi-3.mp3');
+// const yoshiFour_5WinSound = new Audio('./sounds/5win-yoshi-4.mp3');
+// const metalSlugThankYou_5WinSound = new Audio('./sounds/5win-metal-slug-thank-you.mp3');
+// const metalSlugOk_5WinSound = new Audio('./sounds/5win-metal-slug-ok.mp3');
+// const metalSlugBingo_5WinSound = new Audio('./sounds/5win-metal-slug-bingo.mp3');
+// const jojoYes_5WinSound = new Audio('./sounds/5win-jojo-yes.mp3');
+// const cvsnkRyuHadouken_5WinSound = new Audio('./sounds/5win-cvsnk-ryu-hadouken-waving-fist.mp3');
+// const cvsnkRyuShouryuuken_5WinSound = new Audio('./sounds/5win-cvsnk-ryu-shouryuuken-rising-dragon-fist.mp3');
+// const cvsnkKenYay_5WinSound = new Audio('./sounds/5win-cvsnk-ken-yay.mp3');
+// const cvsnkKenIDidIt_5WinSound = new Audio('./sounds/5win-cvsnk-ken-i-did-it.mp3');
+// const cvsnkChunLiLaugh_5WinSound = new Audio('./sounds/5win-cvsnk-chun-li-laugh.mp3');
+// const cvsnkChunLiHereIGo_5WinSound = new Audio('./sounds/5win-cvsnk-chun-li-here-i-go.mp3');
+// const cvsnkSakuraLetsGo_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-lets-go.mp3');
+// const cvsnkSakuraThatsHowItsDone_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-thats-how-its-done.mp3');
+// const cvsnkSakuraGiggle_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-giggle.mp3');
+// const cvsnkSakuraLaugh_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-laugh.mp3');
+// const cvsnkSakuraYup_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-yup.mp3');
+// const cvsnkSakuraHereIGo_5WinSound = new Audio('./sounds/5win-cvsnk-sakura-here-i-go.mp3');
+// const cvsnkDanSuperPieceOfCake_5WinSound = new Audio('./sounds/5win-cvsnk-dan-super-piece-of-cake.mp3');
+// const cvsnkMaiJapansFinest_5WinSound = new Audio('./sounds/5win-cvsnk-mai-japans-finest.mp3');
+// const cvsnkMaiKachousen_5WinSound = new Audio('./sounds/5win-cvsnk-mai-kachousen-flower-butterfly-fan.mp3');
+// const cvsnkYuriHereHere_5WinSound = new Audio('./sounds/5win-cvsnk-yuri-here-here.mp3');
+// const cvsnkYuriPieceOfCake_5WinSound = new Audio('./sounds/5win-cvsnk-yuri-piece-of-cake.mp3');
+// const cvsnkYuriKouken_5WinSound = new Audio('./sounds/5win-cvsnk-yuri-kouken-tiger-glowing-fist.mp3');
+// const cvsnkYuriChouappaaOne_5WinSound = new Audio('./sounds/5win-cvsnk-yuri-chouappaa-super-upper-1.mp3');
+// const cvsnkYuriChouappaaTwo_5WinSound = new Audio('./sounds/5win-cvsnk-yuri-chouappaa-super-upper-2.mp3');
+// const cvsnkAthenaHereComesAthena_5WinSound = new Audio('./sounds/5win-cvsnk-athena-here-comes-athena.mp3');
+// const cvsnkAthenaGanbarimasu_5WinSound = new Audio('./sounds/5lose-cvsnk-athena-ganbarimasu-ill-do-my-best.mp3');
+// const cvsnkAthenaYayPerfect_5WinSound = new Audio('./sounds/5win-cvsnk-athena-yay-perfect.mp3');
+// const cvsnkAthenaIDidItGood_5WinSound = new Audio('./sounds/5win-cvsnk-athena-i-did-it-good.mp3');
+// const cvsnkAthenaPsychoBall_5WinSound = new Audio('./sounds/5win-cvsnk-athena-psycho-ball.mp3');
+// const cvsnkAthenaPsychoSword_5WinSound = new Audio('./sounds/5win-cvsnk-athena-psycho-sword.mp3');
+// const kof99AthenaShowtime_5WinSound = new Audio('./sounds/5win-kof99-athena-showtime.mp3');
+// const cvsnkNakoruruThankYou_5WinSound = new Audio('./sounds/5win-cvsnk-nakoruru-thank-you.mp3');
+// const luigiNumberOne_5WinSound = new Audio('./sounds/5win-im-luigi-number-one.mp3');
+// const superLuigi_5WinSound = new Audio('./sounds/5win-super-luigi.mp3');
+// const cheeredUpToad_5WinSound = new Audio('./sounds/5win-cheered-up-toad.mp3');
+// const correctBuzzer_5WinSound = new Audio('./sounds/5win-correct-buzzer.mp3');
+// const sf2YouWin_5WinSound = new Audio('./sounds/5win-sf2-you-win.mp3');
+// const ssf2YouWin_5WinSound = new Audio('./sounds/5win-ssf2-you-win.mp3');
+// const ssf2Perfect_5WinSound = new Audio('./sounds/5win-ssf2-perfect.mp3');
 
 // 10 Win Sounds
 const animeWow_10WinSound = new Audio('./sounds/10win-anime-wow.mp3');
@@ -196,66 +319,67 @@ export const soundArrayWin5 = [
   animeGirlYes_5WinSound,
   animeGirlYay_5WinSound,
   animeGirlUwu_5WinSound,
-  catGirlNya_5WinSound
-  // tututuAnime_5WinSound,
-  // gudjob_5WinSound,
-  // sonicRingSound_5WinSound,
-  // luigiYes_5WinSound,
-  // marioYahoo_5WinSound,
-  // luigiYahoo_5WinSound,
-  // marioCoinOne_5WinSound,
-  // marioCoinTwo_5WinSound,
-  // animeWowNoBackground_5WinSound,
-  // pokemonLevelUp_5WinSound,
-  // kaChing_5WinSound,
-  // cashRegister_5WinSound,
-  // buttonEffect_5WinSound,
-  // metalGearSolidItemDrop_5WinSound,
-  // flappyBirdPoint_5WinSound,
-  // animeGirlGiggleOne_5WinSound,
-  // animeGirlGiggleTwo_5WinSound,
-  // animeGirlGiggleThree_5WinSound,
-  // animeGirlGiggleFour_5WinSound,
-  // girlYay_5WinSound,
-  // starsteps_5WinSound,
-  // mortalKombatToasty_5WinSound,
-  // animeGirlBareMashita_5WinSound,
-  // pikachuOne_5WinSound,
-  // animeAlert_5WinSound,
-  // totsugeki_5WinSound,
-  // legendOfZeldaRupee_5WinSound,
-  // legendOfZeldaSecret_5WinSound,
-  // crashBandicootOneUp_5WinSound,
-  // streetFighterPerfect_5WinSound,
-  // streetFighterPerfect_5WinSound,
-  // streetFighterCoin_5WinSound,
-  // streetFighterRyuHadouken_5WinSound,
-  // streetFighterRyuHadoukenClassic_5WinSound,
-  // streetFighterKenShoryuken_5WinSound,
-  // streetFighterChunliKikoken_5WinSound,
-  // streetFighterChunliLaugh_5WinSound,
-  // streetFighterChunliYay_5WinSound,
-  // sakuraHadouken_5WinSound,
-  // sakuraHadouken_5WinSound,
-  // brainTrainingRightAnswer_5WinSound,
-  // sailorMoonEffectOne_5WinSound,
-  // sailorMoonAlertTwo_5WinSound,
-  // sailorMoonAlertThree_5WinSound,
-  // success_5WinSound,
-  // applePay_5WinSound,
-  // sm64SoLongBowser_5WinSound,
-  // sm64Sparkle_5WinSound,
-  // sm64LetsGo_5WinSound,
-  // marioMushroomOne_5WinSound,
-  // marioMushroomTwo_5WinSound,
-  // mario1Up_5WinSound,
-  // ffxivChocoboWark_5WinSound,
-  // marioJustWhatINeeded_5WinSound,
-  // eeveeOne_5WinSound,
-  // warioExcellent_5WinSound,
-  // sm64YipeeOne_5WinSound,
-  // sm64YipeeTwo_5WinSound,
-  // marioPause_5WinSound,
+  catGirlNya_5WinSound,
+  tututuAnime_5WinSound,
+  gudjob_5WinSound,
+  sonicRingSound_5WinSound,
+  luigiYes_5WinSound,
+  marioYahoo_5WinSound,
+  luigiYahoo_5WinSound,
+  marioCoinOne_5WinSound,
+  marioCoinTwo_5WinSound,
+  animeWowNoBackground_5WinSound,
+  pokemonLevelUp_5WinSound,
+  kaChing_5WinSound,
+  cashRegister_5WinSound,
+  buttonEffect_5WinSound,
+  metalGearSolidItemDrop_5WinSound,
+  flappyBirdPoint_5WinSound,
+  animeGirlGiggleOne_5WinSound,
+  animeGirlGiggleTwo_5WinSound,
+  animeGirlGiggleThree_5WinSound,
+  animeGirlGiggleFour_5WinSound,
+  girlYay_5WinSound,
+  starsteps_5WinSound,
+  mortalKombatToasty_5WinSound,
+  mortalKombatToasty_5WinSound,
+  animeGirlBareMashita_5WinSound,
+  pikachuOne_5WinSound,
+  animeAlert_5WinSound,
+  totsugeki_5WinSound,
+  legendOfZeldaRupee_5WinSound,
+  legendOfZeldaSecret_5WinSound,
+  crashBandicootOneUp_5WinSound,
+  streetFighterPerfect_5WinSound,
+  streetFighterPerfect_5WinSound,
+  streetFighterCoin_5WinSound,
+  streetFighterRyuHadouken_5WinSound,
+  streetFighterRyuHadoukenClassic_5WinSound,
+  streetFighterKenShoryuken_5WinSound,
+  streetFighterChunliKikoken_5WinSound,
+  streetFighterChunliLaugh_5WinSound,
+  streetFighterChunliYay_5WinSound,
+  sakuraHadouken_5WinSound,
+  sakuraHadouken_5WinSound,
+  brainTrainingRightAnswer_5WinSound,
+  sailorMoonEffectOne_5WinSound,
+  sailorMoonAlertTwo_5WinSound,
+  sailorMoonAlertThree_5WinSound,
+  success_5WinSound,
+  applePay_5WinSound,
+  sm64SoLongBowser_5WinSound,
+  sm64Sparkle_5WinSound,
+  sm64LetsGo_5WinSound,
+  marioMushroomOne_5WinSound,
+  marioMushroomTwo_5WinSound,
+  mario1Up_5WinSound,
+  ffxivChocoboWark_5WinSound,
+  marioJustWhatINeeded_5WinSound,
+  eeveeOne_5WinSound,
+  warioExcellent_5WinSound,
+  sm64YipeeOne_5WinSound,
+  sm64YipeeTwo_5WinSound,
+  marioPause_5WinSound
   // warioWonderful_5WinSound,
   // nice_5WinSound,
   // guileSonicBoom_5WinSound,
