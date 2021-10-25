@@ -1,5 +1,4 @@
-export const buttonSound = new Howl({
-  src: ['./sounds/click.mp3']});
+export const buttonSound = new Audio('./sounds/click.mp3');
 
 // 5 Win Sounds
 const animeGirlYes_5WinSound = new Howl({src: ['./sounds/5win-anime-girl-yes.mp3']});
